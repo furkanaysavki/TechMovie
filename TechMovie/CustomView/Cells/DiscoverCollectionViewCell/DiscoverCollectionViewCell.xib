@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiscoverCollectionViewCell" id="gTV-IL-0wX" customClass="DiscoverCollectionViewCell" customModule="TechMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="360"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="360"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5kz-e4-xNA">
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="360"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="220" id="1lC-Ty-PGt"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="153" id="Vgx-Nj-8lH"/>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="117" id="g2O-Wq-lZL"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="369" id="hYA-v6-L5c"/>
+                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="220" id="rta-vM-GKi"/>
+                            <constraint firstAttribute="height" constant="360" id="vnO-cn-Tbg"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="5kz-e4-xNA" secondAttribute="trailing" id="8tx-IA-7TB"/>
+                <constraint firstAttribute="bottom" secondItem="5kz-e4-xNA" secondAttribute="bottom" id="Bmp-Ua-aha"/>
+                <constraint firstItem="5kz-e4-xNA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="S7G-v0-yTw"/>
+                <constraint firstItem="5kz-e4-xNA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cKP-dt-fcf"/>
+            </constraints>
+            <size key="customSize" width="242" height="236"/>
+            <connections>
+                <outlet property="trendImageView" destination="5kz-e4-xNA" id="ZgZ-d3-dtW"/>
+            </connections>
+            <point key="canvasLocation" x="163.35877862595419" y="14.788732394366198"/>
+        </collectionViewCell>
+    </objects>
+</document>

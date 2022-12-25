@@ -1,0 +1,6 @@
+framework module Pods_TechMovie {
+  umbrella header "Pods-TechMovie-umbrella.h"
+
+  export *
+  module * { export * }
+}
