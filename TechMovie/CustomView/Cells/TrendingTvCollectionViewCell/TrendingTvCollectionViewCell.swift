@@ -21,7 +21,7 @@ class TrendingTvCollectionViewCell: UICollectionViewCell {
                     return
                 }
         trendingTvImageView.sd_setImage(with: url)
-       tvName.text = model.original_name?.uppercased()
+        tvName.text = model.original_name?.uppercased()
     }
 
 }

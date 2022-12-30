@@ -7,7 +7,6 @@ target 'TechMovie' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Alamofire'
-  pod 'Kingfisher'
   pod 'SDWebImage'
   pod 'Gemini'
   # Pods for TechMovie

@@ -1,7 +1,6 @@
 PODS:
   - Alamofire (5.6.4)
   - Gemini (1.4.0)
-  - Kingfisher (7.4.1)
   - RxCocoa (6.5.0):
     - RxRelay (= 6.5.0)
     - RxSwift (= 6.5.0)
@@ -15,7 +14,6 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Gemini
-  - Kingfisher
   - RxCocoa
   - RxSwift
   - SDWebImage
@@ -24,7 +22,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Gemini
-    - Kingfisher
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -33,12 +30,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   Gemini: 4ad915cca8805577fe3021e02feeca2b77dcdbfc
-  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
   RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
   SDWebImage: b9a731e1d6307f44ca703b3976d18c24ca561e84
 
-PODFILE CHECKSUM: d6928f9aaaccd7de41f0b728453e1849f06fc396
+PODFILE CHECKSUM: bbfbbd533e64d9c5b4915445356287ee37ac81bd
 
 COCOAPODS: 1.11.3

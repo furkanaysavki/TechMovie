@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import Kingfisher
 import SDWebImage
 import Gemini
 
@@ -25,7 +24,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var DiscoverCollectionView: GeminiCollectionView!
     @IBOutlet weak var trendingCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
-    @IBOutlet weak var trendingTvCollectionView: UICollectionView!
+   
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     @IBOutlet weak var topRatedCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -36,7 +35,7 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         registerCells()
         bindingDiscoverMovies()
         bindingTrendingMovies()
-        bindingTrendingTvs()
+        
         bindingPopularMovies()
         bindingUpcomingMovies()
         bindingTopRatedMovies()
@@ -51,7 +50,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     private func registerCells(){
         DiscoverCollectionView.register(UINib(nibName: "DiscoverCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DiscoverCollectionViewCell")
         trendingCollectionView.register(UINib(nibName: "TrendingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TrendingCollectionViewCell")
-        trendingTvCollectionView.register(UINib(nibName: "TrendingTvCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TrendingTvCollectionViewCell")
         popularCollectionView.register(UINib(nibName: "PopularCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PopularCollectionViewCell")
         upcomingCollectionView.register(UINib(nibName: "UpcomingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "UpcomingCollectionViewCell")
         topRatedCollectionView.register(UINib(nibName: "TopRatedCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "TopRatedCollectionViewCell")
@@ -77,6 +75,18 @@ extension HomeViewController {
             self.DiscoverCollectionView.animateCell(cell)
             
         }.disposed(by: disposeBag)
+        
+        DiscoverCollectionView.rx.modelSelected(Title.self)
+            .subscribe { movie in
+                let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                
+                detailVC.id = movie.id 
+                detailVC.query = movie.original_name ?? (movie.original_title)!.replacingOccurrences(of: " ", with: "+")
+                
+                
+                self.navigationController?.pushViewController(detailVC, animated: true)
+                
+            }.disposed(by: disposeBag)
            
     }
     
@@ -89,19 +99,19 @@ extension HomeViewController {
             cell.configure(with: item)
             
         }.disposed(by: disposeBag)
+        
+            trendingCollectionView.rx.modelSelected(Title.self)
+                .subscribe { movie in
+                    let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                    
+                    detailVC.id = movie.id
+                    detailVC.query = (movie.original_title)?.replacingOccurrences(of: " ", with: "+") ?? movie.original_name!
+                    
+                    self.navigationController?.pushViewController(detailVC, animated: true)
+                    
+                }.disposed(by: disposeBag)
         }
     
-    private func bindingTrendingTvs(){
-        self.viewModel.getTrendingTvs()
-        trendingTvCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
-        viewModel.trendTvs.bind(to: trendingTvCollectionView.rx.items(cellIdentifier: "TrendingTvCollectionViewCell", cellType: TrendingTvCollectionViewCell.self)) {
-            section, item, cell in
-            
-            cell.configure(with: item)
-            
-        }.disposed(by: disposeBag)
-        
-    }
     private func bindingPopularMovies(){
         self.viewModel.getPopularMovies()
         popularCollectionView.rx.setDelegate(self).disposed(by: disposeBag)
@@ -112,6 +122,16 @@ extension HomeViewController {
             
         }.disposed(by: disposeBag)
         
+            popularCollectionView.rx.modelSelected(Title.self)
+                .subscribe { movie in
+                    let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                    
+                    detailVC.id = movie.id
+                    detailVC.query = (movie.original_title)?.replacingOccurrences(of: " ", with: "+") ?? movie.original_name!
+                    
+                    self.navigationController?.pushViewController(detailVC, animated: true)
+                    
+                }.disposed(by: disposeBag)
     }
     private func bindingUpcomingMovies(){
         self.viewModel.getUpcomingMovies()
@@ -123,6 +143,17 @@ extension HomeViewController {
             
         }.disposed(by: disposeBag)
         
+            upcomingCollectionView.rx.modelSelected(Title.self)
+                .subscribe { movie in
+                    let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                    
+                    detailVC.id = movie.id
+                    detailVC.query = (movie.original_title)?.replacingOccurrences(of: " ", with: "+") ?? movie.original_name!
+                    
+                    self.navigationController?.pushViewController(detailVC, animated: true)
+                    
+                }.disposed(by: disposeBag)
+        
     }
     private func bindingTopRatedMovies(){
         self.viewModel.getTopRatedMovies()
@@ -133,6 +164,16 @@ extension HomeViewController {
             cell.configure(with: item)
             
         }.disposed(by: disposeBag)
+        
+            topRatedCollectionView.rx.modelSelected(Title.self)
+                .subscribe { movie in
+                    let detailVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+                    
+                    detailVC.id = movie.id
+                    detailVC.query = (movie.original_title)?.replacingOccurrences(of: " ", with: "+") ?? movie.original_name!
+                    self.navigationController?.pushViewController(detailVC, animated: true)
+                    
+                }.disposed(by: disposeBag)
         
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
