@@ -14,20 +14,17 @@ class HomeViewModel: HomeViewModelProtocol {
     
     var DiscoverMovies = PublishSubject<[Title]>()
     var trendMovies = PublishSubject<[Title]>()
-    var trendTvs = PublishSubject<[Title]>()
     var popularMovies = PublishSubject<[Title]>()
     var upComingMovies = PublishSubject<[Title]>()
     var topRatedMovies = PublishSubject<[Title]>()
     
-    
-    lazy var network: GetMovieAndTv = Service()
+    lazy var network: GetMovie = Service()
     
     func getDiscover() {
         network.getData(MovieResponse.self, url: Constants.Discover) { [weak self] result in
             switch result {
             case .success(let response):
                 self?.DiscoverMovies.onNext(response.results)
-                print(response.results)
             case .failure(_):
                 print(NetworkError.parsingFailed)
                 
@@ -39,7 +36,6 @@ class HomeViewModel: HomeViewModelProtocol {
                 switch result {
                 case .success(let response):
                     self?.trendMovies.onNext(response.results)
-                    print(response.results)
                 case .failure(_):
                     print(NetworkError.parsingFailed)
                     
@@ -47,25 +43,12 @@ class HomeViewModel: HomeViewModelProtocol {
             }
             
         }
-        func getTrendingTvs() {
-            network.getData(MovieResponse.self, url: Constants.TrendTv) { [weak self] result in
-                switch result {
-                case .success(let response):
-                    self?.trendTvs.onNext(response.results)
-                    print(response.results)
-                case .failure(_):
-                    print(NetworkError.parsingFailed)
-                    
-                }
-            }
-            
-        }
+        
         func getPopularMovies() {
             network.getData(MovieResponse.self, url: Constants.PopularMovie) { [weak self] result in
                 switch result {
                 case .success(let response):
                     self?.popularMovies.onNext(response.results)
-                    print(response.results)
                 case .failure(_):
                     print(NetworkError.parsingFailed)
                     
@@ -78,7 +61,6 @@ class HomeViewModel: HomeViewModelProtocol {
                 switch result {
                 case .success(let response):
                     self?.upComingMovies.onNext(response.results)
-                    print(response.results)
                 case .failure(_):
                     print(NetworkError.parsingFailed)
                     
@@ -91,7 +73,6 @@ class HomeViewModel: HomeViewModelProtocol {
                 switch result {
                 case .success(let response):
                     self?.topRatedMovies.onNext(response.results)
-                    print(response.results)
                 case .failure(_):
                     print(NetworkError.parsingFailed)
                     

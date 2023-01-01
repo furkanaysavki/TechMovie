@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-final class Service: GetMovieAndTv, GetMovieDetailAndYoutube  {
+final class Service: GetMovie, GetMovieDetailAndYoutube, SearchMovie  {
     
     func getData<T: Decodable>(_ type: T.Type, url: String, completion: @escaping(Result<T,NetworkError>) -> Void) {
         
@@ -78,4 +78,18 @@ final class Service: GetMovieAndTv, GetMovieDetailAndYoutube  {
             }
         }
     }
+    func searchMovie<T: Decodable>(_ type: T.Type, url: String, query: String, completion: @escaping(Result<T,NetworkError>) -> Void) {
+        
+        AF.request(url, method: .get).responseDecodable(of:T.self) { response in
+            
+            switch response.result {
+            case .success(let result):
+                completion(.success(result))
+            case .failure(_):
+                completion(.failure(NetworkError.parsingFailed))
+            }
+            
+        }
+    }
 }
+

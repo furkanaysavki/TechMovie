@@ -9,10 +9,9 @@ import Foundation
 
 protocol HomeViewModelProtocol {
     
-    var network: GetMovieAndTv {get set}
+    var network: GetMovie {get set}
     func getDiscover()
     func getTrendingMovies()
-    func getTrendingTvs()
     func getPopularMovies()
     func getUpcomingMovies()
     func getTopRatedMovies()

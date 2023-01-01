@@ -25,8 +25,7 @@ final class DetailViewModel: DetailViewModelProtocol {
             switch result {
             case .success(let detail):
                 self?.detailMovie.onNext(detail)
-                print(detail)
-                case .failure(_):
+            case .failure(_):
                 print(NetworkError.parsingFailed)
             }
         }
@@ -39,10 +38,8 @@ final class DetailViewModel: DetailViewModelProtocol {
             switch result {
             case .success(let response):
                 self?.youtubeTrailer.onNext(response)
-                print("youtubeResponse:\(response)")
             case .failure(_):
                 print(NetworkError.parsingFailed)
-                print("YOUTUBE OLMADIIII..")
             }
         }
         
@@ -54,7 +51,6 @@ final class DetailViewModel: DetailViewModelProtocol {
             switch result {
             case .success(let response):
                 self?.castData.onNext(response.cast)
-             
             case .failure(_):
                 print(NetworkError.parsingFailed)
             }
@@ -67,7 +63,6 @@ final class DetailViewModel: DetailViewModelProtocol {
             switch result {
             case .success(let response):
                 self?.recommendation.onNext(response.results)
-             
             case .failure(_):
                 print(NetworkError.parsingFailed)
             }

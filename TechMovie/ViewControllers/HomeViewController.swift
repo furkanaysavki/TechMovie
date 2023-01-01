@@ -24,7 +24,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var DiscoverCollectionView: GeminiCollectionView!
     @IBOutlet weak var trendingCollectionView: UICollectionView!
     @IBOutlet weak var popularCollectionView: UICollectionView!
-   
     @IBOutlet weak var upcomingCollectionView: UICollectionView!
     @IBOutlet weak var topRatedCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -32,10 +31,10 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         registerCells()
         bindingDiscoverMovies()
         bindingTrendingMovies()
-        
         bindingPopularMovies()
         bindingUpcomingMovies()
         bindingTopRatedMovies()

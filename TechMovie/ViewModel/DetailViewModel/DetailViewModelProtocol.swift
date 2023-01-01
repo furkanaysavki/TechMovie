@@ -8,6 +8,7 @@
 import Foundation
 
 protocol DetailViewModelProtocol {
+    
     var network: GetMovieDetailAndYoutube {get set}
     func getDetails(id: Int)
     func getMovieYoutube(query: String)

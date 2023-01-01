@@ -13,7 +13,6 @@ struct Constants {
     static let YoutubeAPI_KEY = "AIzaSyCcGTBneKy4-ZZRiPS0MoKwAKBbR27mqJs"
     static let YoutubeBaseURL = "https://youtube.googleapis.com/youtube/v3/search?"
     static let TrendMovie = "\(Constants.baseURL)/3/trending/movie/day?api_key=\(Constants.API_KEY)"
-    static let TrendTv = "\(Constants.baseURL)/3/trending/tv/day?api_key=\(Constants.API_KEY)"
     static let PopularMovie = "\(Constants.baseURL)/3/movie/popular?api_key=\(Constants.API_KEY)&language=en-US&page=1"
     static let Upcoming = "\(Constants.baseURL)/3/movie/upcoming?api_key=\(Constants.API_KEY)&language=en-US&page=1"
     static let TopRated = "\(Constants.baseURL)/3/movie/top_rated?api_key=\(Constants.API_KEY)&language=en-US&page=1"
