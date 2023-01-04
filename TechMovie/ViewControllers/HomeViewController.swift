@@ -39,12 +39,11 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         bindingUpcomingMovies()
         bindingTopRatedMovies()
         configureAnimation()
-        
-
+    
     }
     override func viewWillAppear(_ animated: Bool) {
         pageControl.currentPage = 0
-        pageControl.numberOfPages = 10
+        pageControl.numberOfPages = 20
     }
     private func registerCells(){
         DiscoverCollectionView.register(UINib(nibName: "DiscoverCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "DiscoverCollectionViewCell")

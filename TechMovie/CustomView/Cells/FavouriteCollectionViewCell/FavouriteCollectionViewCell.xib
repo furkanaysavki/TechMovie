@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FavouriteCollectionViewCell" id="gTV-IL-0wX" customClass="FavouriteCollectionViewCell" customModule="TechMovie" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="110"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="110"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CXv-TO-51X">
+                        <rect key="frame" x="0.0" y="0.0" width="118" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="110" id="HKO-Mx-BxV"/>
+                            <constraint firstAttribute="width" constant="118" id="l98-oG-fhH"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vid-ZW-jHY">
+                        <rect key="frame" x="127" y="13" width="177" height="84"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="84" id="c7E-fM-0f7"/>
+                            <constraint firstAttribute="width" constant="177" id="lNB-am-wU2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQT-QH-0c1">
+                        <rect key="frame" x="308" y="26" width="75" height="59"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                        </buttonConfiguration>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Vid-ZW-jHY" secondAttribute="bottom" constant="13" id="6N0-Ft-0pI"/>
+                <constraint firstItem="CXv-TO-51X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DJ6-J2-n1K"/>
+                <constraint firstItem="Vid-ZW-jHY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="13" id="Fqe-zT-pfr"/>
+                <constraint firstAttribute="trailing" secondItem="Vid-ZW-jHY" secondAttribute="trailing" constant="86" id="JGK-JY-ktS"/>
+                <constraint firstItem="Vid-ZW-jHY" firstAttribute="leading" secondItem="CXv-TO-51X" secondAttribute="trailing" constant="9" id="Qd9-bu-YdA"/>
+                <constraint firstAttribute="bottom" secondItem="gQT-QH-0c1" secondAttribute="bottom" constant="25" id="YRv-dp-gW9"/>
+                <constraint firstAttribute="bottom" secondItem="CXv-TO-51X" secondAttribute="bottom" id="Zww-DO-AlD"/>
+                <constraint firstItem="gQT-QH-0c1" firstAttribute="leading" secondItem="Vid-ZW-jHY" secondAttribute="trailing" constant="4" id="au2-5K-ZDE"/>
+                <constraint firstItem="CXv-TO-51X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bzC-1w-yWb"/>
+                <constraint firstItem="Vid-ZW-jHY" firstAttribute="leading" secondItem="CXv-TO-51X" secondAttribute="trailing" constant="9" id="hxf-n4-hcA"/>
+                <constraint firstAttribute="trailing" secondItem="gQT-QH-0c1" secondAttribute="trailing" constant="7" id="kXm-ob-Q9W"/>
+                <constraint firstItem="gQT-QH-0c1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="26" id="vLX-ft-KK3"/>
+            </constraints>
+            <size key="customSize" width="391" height="100"/>
+            <connections>
+                <outlet property="imageView" destination="CXv-TO-51X" id="5ta-yQ-P5x"/>
+                <outlet property="likeButton" destination="gQT-QH-0c1" id="AOU-CH-lFe"/>
+                <outlet property="nameLabel" destination="Vid-ZW-jHY" id="ifF-dY-h1O"/>
+            </connections>
+            <point key="canvasLocation" x="352.67175572519085" y="9.8591549295774659"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

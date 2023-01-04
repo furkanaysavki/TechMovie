@@ -12,17 +12,22 @@ import WebKit
 
 class DetailViewController: UIViewController, UIScrollViewDelegate {
 
-   
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var castCollectionView: UICollectionView!
     @IBOutlet weak var recommendationCollectionView: UICollectionView!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
     private var viewModel = DetailViewModel()
+    private var favouriteModel = FavouriteViewModel()
 
     var disposeBag = DisposeBag()
     var id = Int()
     var query = String()
+    var originalTitle = String()
+    var poster = String()
+    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +36,11 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
         bindingCast()
         bindingRecommendations()
         registerCells()
+        likeButton.addTarget(self, action: #selector(favList(_:)), for: .touchUpInside)
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        favoriMovieStatus()
     }
 
     private func registerCells(){
@@ -46,8 +55,11 @@ extension DetailViewController {
         
         viewModel.getDetails(id: id)
         viewModel.detailMovie.bind { movieDetail in
+            
             self.overviewLabel.text = movieDetail.overview
             self.nameLabel.text = movieDetail.originalTitle
+            self.poster = movieDetail.posterPath ?? ""
+            self.originalTitle = movieDetail.originalTitle ?? ""
             
         } .disposed(by: disposeBag)
         
@@ -60,8 +72,8 @@ extension DetailViewController {
             
             self.webView.load(URLRequest(url: url))
         }.disposed(by: disposeBag)
-        }
-        
+    }
+    
     private func bindingCast() {
         
         self.viewModel.getCastData(id: id)
@@ -70,7 +82,7 @@ extension DetailViewController {
             section, item, cell in
             
             cell.configure(with: item )
-           
+            
         } .disposed(by: disposeBag)
         
     }
@@ -82,7 +94,8 @@ extension DetailViewController {
             section, item, cell in
             
             cell.configure(with: item )
-           
+            
+            
         } .disposed(by: disposeBag)
         recommendationCollectionView.rx.modelSelected(Title.self)
             .subscribe { movie in
@@ -96,7 +109,27 @@ extension DetailViewController {
             }.disposed(by: disposeBag)
         
     }
+    @objc func favList(_ likeButton: UIButton) {
+        
+        let favoriteList = RealmHelper.sharedInstance.fetchFavoriteList().map { $0 }
+        if let position = favoriteList.firstIndex(where: {$0.id == id}){
+            RealmHelper.sharedInstance.deleteFromDb(movie: favoriteList[position])
+            
+            self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }else{
+            favouriteModel.saveMovie(id: self.id, original_title: self.originalTitle , poster_path: self.poster)
+            self.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+    }
+        
+    func favoriMovieStatus() {
+        let favoriteList = RealmHelper.sharedInstance.fetchFavoriteList().map { $0 }
+        if favoriteList.firstIndex(where: {$0.id == id}) != nil{
+            self.likeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            self.likeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+    }
 }
-
 
 
