@@ -14,7 +14,6 @@ final class FavouriteViewModel: FavouriteViewModelProtocol {
     var realmManager: RealmProtocol = RealmHelper()
     var favouriteMovie = BehaviorSubject(value: [FavouriteMovie]())
     
-    private var disposeBag = DisposeBag()
     
     func saveMovie(id: Int, original_title: String, poster_path: String ) {
         
