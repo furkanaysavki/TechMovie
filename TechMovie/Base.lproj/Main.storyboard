@@ -473,18 +473,15 @@
             </objects>
             <point key="canvasLocation" x="2709.1603053435115" y="-16.197183098591552"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Barvc-->
         <scene sceneID="bT8-ry-YZn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fsn-YI-sSo" sceneMemberID="viewController">
+                <tabBarController id="fsn-YI-sSo" customClass="CustomTabBarvc" customModule="TechMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7l3-AF-Xwr">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7l3-AF-Xwr" customClass="TabBarVC" customModule="TechMovie" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="nmk-vA-lIV" kind="relationship" relationship="viewControllers" id="Ki6-GD-0Iu"/>
@@ -500,9 +497,7 @@
         <scene sceneID="75n-Zb-iID">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nmk-vA-lIV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="film" catalog="system" id="uqE-5D-Imy">
-                        <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" image="film" catalog="system" id="uqE-5D-Imy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ot5-8f-z8c">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -522,9 +517,7 @@
         <scene sceneID="qNE-Ew-lvk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="A2I-Y5-F5l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="Y9X-Uq-dQy">
-                        <color key="badgeColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="" id="Y9X-Uq-dQy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YtJ-zK-a2T">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -543,7 +536,7 @@
         <scene sceneID="6hp-dS-ZxW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JgP-m4-Mmz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="heart.fill" catalog="system" id="Ppo-tQ-rIU"/>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="Ppo-tQ-rIU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Nv-oj-HYz">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -561,13 +554,11 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Lrn-PY-ERg"/>
-        <segue reference="dO0-CN-bqQ"/>
+        <segue reference="Pom-Po-xzb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

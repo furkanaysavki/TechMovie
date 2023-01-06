@@ -19,7 +19,7 @@ class FavouriteViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        navigationController()
+       // navigationController()
         bindFavouriteCollectionCell()
         registerCell()
     }
