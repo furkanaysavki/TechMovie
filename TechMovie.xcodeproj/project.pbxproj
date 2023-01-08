@@ -18,6 +18,10 @@
 		DF2573EC2966242200D14C9C /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DF2573EB2966242200D14C9C /* Realm */; };
 		DF2573EE2966242200D14C9C /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF2573ED2966242200D14C9C /* RealmSwift */; };
 		DF27ED65295A1CCB0025BC21 /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF27ED64295A1CCB0025BC21 /* YoutubeSearchResponse.swift */; };
+		DF2D314F296B0015006710EA /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D314E296B0015006710EA /* OnboardingViewController.swift */; };
+		DF2D3151296B04D6006710EA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D3150296B04D6006710EA /* UIView+Extension.swift */; };
+		DF2D3153296B070D006710EA /* OnboardingSlideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D3152296B070D006710EA /* OnboardingSlideModel.swift */; };
+		DF2D3155296B0C8B006710EA /* OnBoardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2D3154296B0C8B006710EA /* OnBoardingCollectionViewCell.swift */; };
 		DF501EF929689CD100A81043 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF501EF829689CD100A81043 /* TabBarVC.swift */; };
 		DF538EB0294F241F00B74E3A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF538EAF294F241F00B74E3A /* Service.swift */; };
 		DF538EB2294F261300B74E3A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF538EB1294F261300B74E3A /* NetworkError.swift */; };
@@ -73,6 +77,10 @@
 		DF1F457F2952400E00A1AF35 /* TopRatedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF1F45802952400E00A1AF35 /* TopRatedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopRatedCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF27ED64295A1CCB0025BC21 /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		DF2D314E296B0015006710EA /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DF2D3150296B04D6006710EA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		DF2D3152296B070D006710EA /* OnboardingSlideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlideModel.swift; sourceTree = "<group>"; };
+		DF2D3154296B0C8B006710EA /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF501EF829689CD100A81043 /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
 		DF538EAF294F241F00B74E3A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		DF538EB1294F261300B74E3A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -210,6 +218,16 @@
 			path = TopRatedCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		DF2D314D296AFFE9006710EA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DF2D314E296B0015006710EA /* OnboardingViewController.swift */,
+				DF2D3152296B070D006710EA /* OnboardingSlideModel.swift */,
+				DF2D3154296B0C8B006710EA /* OnBoardingCollectionViewCell.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		DF538EB7294F2D0800B74E3A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +301,7 @@
 		DF80D5FA294E2D4100755D66 /* TechMovie */ = {
 			isa = PBXGroup;
 			children = (
+				DF2D314D296AFFE9006710EA /* Onboarding */,
 				DF8668962965EC7E0014CF5B /* Extension */,
 				DF9BAA1029634C6100C7584E /* RealmManager */,
 				DF1F45832952442100A1AF35 /* CustomView */,
@@ -324,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8668972965EC950014CF5B /* ViewExtension.swift */,
+				DF2D3150296B04D6006710EA /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -549,14 +569,18 @@
 				DF5EA311295CB5D40007CC59 /* CastCollectionViewCell.swift in Sources */,
 				DF538EB6294F2C5C00B74E3A /* ServiceProtocol.swift in Sources */,
 				DF849D4E2964990800451D57 /* FavouriteCollectionViewCell.swift in Sources */,
+				DF2D3155296B0C8B006710EA /* OnBoardingCollectionViewCell.swift in Sources */,
 				DF0C972B295895E900C73511 /* DetailViewController.swift in Sources */,
 				DF27ED65295A1CCB0025BC21 /* YoutubeSearchResponse.swift in Sources */,
+				DF2D3153296B070D006710EA /* OnboardingSlideModel.swift in Sources */,
 				DF9BAA1429634D1700C7584E /* RealmData.swift in Sources */,
 				DF1F457929523A9300A1AF35 /* UpcomingCollectionViewCell.swift in Sources */,
 				DFB46DB12967377A009973CF /* CustomTabBarVC.swift in Sources */,
+				DF2D314F296B0015006710EA /* OnboardingViewController.swift in Sources */,
 				DFF0F47F296056EC00488F13 /* SearchViewModelProtocol.swift in Sources */,
 				DFBC4C702958CB4F000586A3 /* MovieDetailModel.swift in Sources */,
 				DF1F45812952400E00A1AF35 /* TopRatedCollectionViewCell.swift in Sources */,
+				DF2D3151296B04D6006710EA /* UIView+Extension.swift in Sources */,
 				DF8668982965EC950014CF5B /* ViewExtension.swift in Sources */,
 				DF538EB0294F241F00B74E3A /* Service.swift in Sources */,
 				DFF0F47D2960567200488F13 /* SearchViewModel.swift in Sources */,

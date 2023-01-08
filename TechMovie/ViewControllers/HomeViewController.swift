@@ -181,6 +181,6 @@ extension HomeViewController {
         if let visibleIndexPath = self.DiscoverCollectionView.indexPathForItem(at: visiblePoint) {
             self.pageControl.currentPage = visibleIndexPath.row
         }
+        
     }
-    
 }
