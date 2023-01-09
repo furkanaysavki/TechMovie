@@ -32,11 +32,9 @@ class OnboardingViewController: UIViewController {
                   OnboardingSlideModel(slideTitle: "FIND MOVIE", slideDescription: "Find movies that bring your mode back", slideImage: UIImage(named: "slide 3")!),
                   OnboardingSlideModel(slideTitle: "ADD TO FAVOURITE", slideDescription: "Add your favourite movies to your favourite list", slideImage: UIImage(named: "slide 1")!)]
         
-      
-    }
+      }
     
-
-    @IBAction func nextButtonClicked(_ sender: UIButton) {
+     @IBAction func nextButtonClicked(_ sender: UIButton) {
         
         if currentPage == slides.count - 1 {
             let controller = storyboard?.instantiateViewController(identifier: "HomeVC") as! UITabBarController
