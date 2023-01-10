@@ -16,12 +16,7 @@ class FavouriteCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.shadowColor = UIColor.white.cgColor
-        self.layer.shadowRadius = 5
-        self.layer.shadowOpacity = 1
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.masksToBounds = false
-        self.contentView.layer.cornerRadius = 20.0
+        
     }
 
     func configure(with model: FavouriteMovie) {
