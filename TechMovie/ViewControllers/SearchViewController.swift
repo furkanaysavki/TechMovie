@@ -22,6 +22,8 @@ class SearchViewController: UIViewController, UIScrollViewDelegate, UISearchBarD
 
         registerCells()
         bindingSearchBar()
+        bindingTableView()
+        self.navigationController?.hidesBarsOnSwipe = true
         
        }
     
@@ -44,7 +46,7 @@ extension SearchViewController {
             .disposed(by: disposeBag)
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func bindingTableView() {
         
         _ = search.subscribe { value in
             _ = value.map { query in

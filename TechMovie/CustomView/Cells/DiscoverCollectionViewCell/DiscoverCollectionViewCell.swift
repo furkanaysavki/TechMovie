@@ -16,6 +16,7 @@ class DiscoverCollectionViewCell: GeminiCell {
     override func awakeFromNib() {
         super.awakeFromNib()
                
+       
     }
     func configure(with model: Title ) {
         

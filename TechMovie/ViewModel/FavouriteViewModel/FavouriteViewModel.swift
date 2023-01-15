@@ -25,11 +25,8 @@ final class FavouriteViewModel: FavouriteViewModelProtocol {
         
         favouriteMovie.bind { save in
             save.onNext(movie)
-            print("FAVMODEL:\(movie)")
-            
         }
-        
-    }
+        }
 }
 
 

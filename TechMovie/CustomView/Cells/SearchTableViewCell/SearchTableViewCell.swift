@@ -11,6 +11,7 @@ class SearchTableViewCell: UITableViewCell {
 
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieName: UILabel!
+    @IBOutlet weak var voteLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,7 @@ class SearchTableViewCell: UITableViewCell {
                 }
        movieImage.sd_setImage(with: url)
        movieName.text = model.original_title
+        voteLabel.text = String(model.vote_average)
     }
     
 }

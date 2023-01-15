@@ -30,6 +30,7 @@
 		DF538EB9294F2D1A00B74E3A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF538EB8294F2D1A00B74E3A /* HomeViewModel.swift */; };
 		DF538EBC294F2E5A00B74E3A /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF538EBB294F2E5A00B74E3A /* MovieModel.swift */; };
 		DF538EBE294F2F4400B74E3A /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF538EBD294F2F4400B74E3A /* HomeViewModelProtocol.swift */; };
+		DF574FBE297329500037D663 /* UIView+GradientViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF574FBD297329500037D663 /* UIView+GradientViewExtension.swift */; };
 		DF5EA30D295CB3710007CC59 /* CastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EA30C295CB3710007CC59 /* CastModel.swift */; };
 		DF5EA311295CB5D40007CC59 /* CastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EA30F295CB5D40007CC59 /* CastCollectionViewCell.swift */; };
 		DF5EA312295CB5D40007CC59 /* CastCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF5EA310295CB5D40007CC59 /* CastCollectionViewCell.xib */; };
@@ -49,7 +50,7 @@
 		DF9A346C2950D63A0053E24F /* TrendingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9A346A2950D63A0053E24F /* TrendingCollectionViewCell.swift */; };
 		DF9A346D2950D63A0053E24F /* TrendingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF9A346B2950D63A0053E24F /* TrendingCollectionViewCell.xib */; };
 		DF9BAA1229634C7000C7584E /* RealmHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BAA1129634C7000C7584E /* RealmHelper.swift */; };
-		DF9BAA1429634D1700C7584E /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BAA1329634D1700C7584E /* RealmData.swift */; };
+		DF9BAA1429634D1700C7584E /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BAA1329634D1700C7584E /* RealmModel.swift */; };
 		DF9BAA17296376C700C7584E /* FavouriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BAA16296376C700C7584E /* FavouriteViewController.swift */; };
 		DF9BAA1A296376FF00C7584E /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BAA19296376FF00C7584E /* FavouriteViewModel.swift */; };
 		DF9BAA1C2963771200C7584E /* FavouriteViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9BAA1B2963771200C7584E /* FavouriteViewModelProtocol.swift */; };
@@ -89,6 +90,7 @@
 		DF538EB8294F2D1A00B74E3A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		DF538EBB294F2E5A00B74E3A /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		DF538EBD294F2F4400B74E3A /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
+		DF574FBD297329500037D663 /* UIView+GradientViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GradientViewExtension.swift"; sourceTree = "<group>"; };
 		DF5EA30C295CB3710007CC59 /* CastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastModel.swift; sourceTree = "<group>"; };
 		DF5EA30F295CB5D40007CC59 /* CastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF5EA310295CB5D40007CC59 /* CastCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CastCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -110,7 +112,7 @@
 		DF9A346A2950D63A0053E24F /* TrendingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionViewCell.swift; sourceTree = "<group>"; };
 		DF9A346B2950D63A0053E24F /* TrendingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingCollectionViewCell.xib; sourceTree = "<group>"; };
 		DF9BAA1129634C7000C7584E /* RealmHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHelper.swift; sourceTree = "<group>"; };
-		DF9BAA1329634D1700C7584E /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
+		DF9BAA1329634D1700C7584E /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
 		DF9BAA16296376C700C7584E /* FavouriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewController.swift; sourceTree = "<group>"; };
 		DF9BAA19296376FF00C7584E /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		DF9BAA1B2963771200C7584E /* FavouriteViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -246,7 +248,7 @@
 				DFBC4C6F2958CB4F000586A3 /* MovieDetailModel.swift */,
 				DF27ED64295A1CCB0025BC21 /* YoutubeSearchResponse.swift */,
 				DF5EA30C295CB3710007CC59 /* CastModel.swift */,
-				DF9BAA1329634D1700C7584E /* RealmData.swift */,
+				DF9BAA1329634D1700C7584E /* RealmModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -344,6 +346,7 @@
 			children = (
 				DF8668972965EC950014CF5B /* ViewExtension.swift */,
 				DF2D3150296B04D6006710EA /* UIView+Extension.swift */,
+				DF574FBD297329500037D663 /* UIView+GradientViewExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -573,7 +576,7 @@
 				DF0C972B295895E900C73511 /* DetailViewController.swift in Sources */,
 				DF27ED65295A1CCB0025BC21 /* YoutubeSearchResponse.swift in Sources */,
 				DF2D3153296B070D006710EA /* OnboardingSlideModel.swift in Sources */,
-				DF9BAA1429634D1700C7584E /* RealmData.swift in Sources */,
+				DF9BAA1429634D1700C7584E /* RealmModel.swift in Sources */,
 				DF1F457929523A9300A1AF35 /* UpcomingCollectionViewCell.swift in Sources */,
 				DFB46DB12967377A009973CF /* CustomTabBarVC.swift in Sources */,
 				DF2D314F296B0015006710EA /* OnboardingViewController.swift in Sources */,
@@ -582,6 +585,7 @@
 				DF1F45812952400E00A1AF35 /* TopRatedCollectionViewCell.swift in Sources */,
 				DF2D3151296B04D6006710EA /* UIView+Extension.swift in Sources */,
 				DF8668982965EC950014CF5B /* ViewExtension.swift in Sources */,
+				DF574FBE297329500037D663 /* UIView+GradientViewExtension.swift in Sources */,
 				DF538EB0294F241F00B74E3A /* Service.swift in Sources */,
 				DFF0F47D2960567200488F13 /* SearchViewModel.swift in Sources */,
 				DFF0F476296053DC00488F13 /* SearchViewController.swift in Sources */,

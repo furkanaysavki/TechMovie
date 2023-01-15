@@ -22,6 +22,7 @@ class FavouriteViewController: UIViewController, UIScrollViewDelegate {
        // navigationController()
         bindFavouriteCollectionCell()
         registerCell()
+        self.navigationController?.hidesBarsOnSwipe = true
     }
     
     func navigationController() {
@@ -42,7 +43,8 @@ class FavouriteViewController: UIViewController, UIScrollViewDelegate {
         viewModel.getFavouriteMovie()
         
     }
-}
+    }
+
 extension FavouriteViewController {
     
     private func bindFavouriteCollectionCell() {

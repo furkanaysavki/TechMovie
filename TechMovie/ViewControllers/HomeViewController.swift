@@ -12,8 +12,6 @@ import SDWebImage
 import Gemini
 
 
-
-
 class HomeViewController: UIViewController, UIScrollViewDelegate {
     
     private var viewModel = HomeViewModel()
@@ -39,6 +37,9 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         bindingUpcomingMovies()
         bindingTopRatedMovies()
         configureAnimation()
+        configureNavigationBar()
+        self.navigationController?.hidesBarsOnSwipe = true
+     
     
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -59,7 +60,13 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
             .scale(0.25)
             .scaleEffect(.scaleUp)
         }
-}
+    func configureNavigationBar() {
+        
+        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController!.navigationBar.shadowImage = UIImage()
+        self.navigationController!.navigationBar.isTranslucent = true
+        }
+    }
 
 extension HomeViewController {
     
@@ -80,7 +87,6 @@ extension HomeViewController {
                 
                 detailVC.id = movie.id 
                 detailVC.query = movie.original_name ?? (movie.original_title)!.replacingOccurrences(of: " ", with: "+")
-                
                 
                 self.navigationController?.pushViewController(detailVC, animated: true)
                 
@@ -175,12 +181,12 @@ extension HomeViewController {
         
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
         self.DiscoverCollectionView.animateVisibleCells()
         let visibleRect = CGRect(origin: self.DiscoverCollectionView.contentOffset, size: self.DiscoverCollectionView.bounds.size)
         let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
         if let visibleIndexPath = self.DiscoverCollectionView.indexPathForItem(at: visiblePoint) {
             self.pageControl.currentPage = visibleIndexPath.row
         }
-        
     }
 }

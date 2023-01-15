@@ -35,7 +35,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQT-QH-0c1">
-                        <rect key="frame" x="308" y="26" width="75" height="59"/>
+                        <rect key="frame" x="332" y="35" width="48" height="41"/>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
@@ -44,20 +44,20 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="Vid-ZW-jHY" secondAttribute="bottom" constant="13" id="6N0-Ft-0pI"/>
                 <constraint firstItem="CXv-TO-51X" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="DJ6-J2-n1K"/>
                 <constraint firstItem="Vid-ZW-jHY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="13" id="Fqe-zT-pfr"/>
                 <constraint firstAttribute="trailing" secondItem="Vid-ZW-jHY" secondAttribute="trailing" constant="86" id="JGK-JY-ktS"/>
                 <constraint firstItem="Vid-ZW-jHY" firstAttribute="leading" secondItem="CXv-TO-51X" secondAttribute="trailing" constant="9" id="Qd9-bu-YdA"/>
-                <constraint firstAttribute="bottom" secondItem="gQT-QH-0c1" secondAttribute="bottom" constant="25" id="YRv-dp-gW9"/>
+                <constraint firstAttribute="bottom" secondItem="gQT-QH-0c1" secondAttribute="bottom" constant="34" id="YRv-dp-gW9"/>
                 <constraint firstAttribute="bottom" secondItem="CXv-TO-51X" secondAttribute="bottom" id="Zww-DO-AlD"/>
-                <constraint firstItem="gQT-QH-0c1" firstAttribute="leading" secondItem="Vid-ZW-jHY" secondAttribute="trailing" constant="4" id="au2-5K-ZDE"/>
+                <constraint firstItem="gQT-QH-0c1" firstAttribute="leading" secondItem="Vid-ZW-jHY" secondAttribute="trailing" constant="28" id="au2-5K-ZDE"/>
                 <constraint firstItem="CXv-TO-51X" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bzC-1w-yWb"/>
                 <constraint firstItem="Vid-ZW-jHY" firstAttribute="leading" secondItem="CXv-TO-51X" secondAttribute="trailing" constant="9" id="hxf-n4-hcA"/>
-                <constraint firstAttribute="trailing" secondItem="gQT-QH-0c1" secondAttribute="trailing" constant="7" id="kXm-ob-Q9W"/>
-                <constraint firstItem="gQT-QH-0c1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="26" id="vLX-ft-KK3"/>
+                <constraint firstAttribute="trailing" secondItem="gQT-QH-0c1" secondAttribute="trailing" constant="10" id="kXm-ob-Q9W"/>
+                <constraint firstItem="gQT-QH-0c1" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="35" id="vLX-ft-KK3"/>
             </constraints>
             <size key="customSize" width="391" height="100"/>
             <userDefinedRuntimeAttributes>

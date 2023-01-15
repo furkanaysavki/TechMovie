@@ -27,9 +27,7 @@ class DetailViewController: UIViewController, UIScrollViewDelegate {
     var originalTitle = String()
     var poster = String()
     
-  
-    
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
 
         bindingUI()
