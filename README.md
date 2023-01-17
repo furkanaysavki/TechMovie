@@ -12,17 +12,10 @@
 - Gemini
 
 
-![Web 1920 – 1](https://user-images.githubusercontent.com/45628483/212719341-53622f91-a53b-418a-bd48-2e3d910ad3e5.png)
-![Web 1920 – 1](https://user-images.githubusercontent.com/45628483/212737227-9db09d88-229e-43ae-80a0-a8325816aeab.png)
 
 
 
-
-
-
-
-
-
+![Web 1920 – 1](https://user-images.githubusercontent.com/45628483/212994484-1e549760-61b3-4183-a07d-c5c758381c0b.png)
 
 
 
