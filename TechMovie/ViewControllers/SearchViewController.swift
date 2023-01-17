@@ -24,7 +24,7 @@ class SearchViewController: UIViewController, UIScrollViewDelegate, UISearchBarD
         bindingSearchBar()
         bindingTableView()
         self.navigationController?.hidesBarsOnSwipe = true
-        
+    
        }
     
     private func registerCells(){
